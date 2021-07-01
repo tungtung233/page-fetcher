@@ -43,8 +43,8 @@ const fetcher = function(URL, localPath) {
 
         } else {
 
-          rl.question('File already exists, would you like to overwrite? Y/N', (answer) => {
-            if (answer === 'y' || answer === 'Y') {
+          rl.question('File already exists, would you like to overwrite? Y/N   \n', (answer) => {
+            if (answer === 'y' || answer === 'Y') { 
               fs.writeFile(localPath, body, (err) => {
                 if (err) throw err;
         
